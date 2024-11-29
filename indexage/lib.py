@@ -21,6 +21,9 @@ def size(size_in_bytes):
     return size_in_bytes
 
 
+IMAGES_EXTS = ["png", "jpg", "jpeg", "tiff", "svg"]
+
+
 def create_html_index(path_to_folder, html_template, options):
     """create an index.html"""
     folder_list = sorted(os.listdir(path_to_folder))
@@ -53,8 +56,8 @@ def create_html_index(path_to_folder, html_template, options):
         add = 'class="thumbnail"' if preview else ""
         other = ""
         if preview:
-            extension = one_element[: one_element.rfind(".")]
-            if extension in ["png", "jpg", "jpeg", "tiff"]:
+            extension = one_element[one_element.rfind(".") + 1 :]
+            if extension in IMAGES_EXTS:
                 other = f'<span><img src="{one_element}"></span>'
             else:
                 other = f'<span><iframe src="{one_element}"></iframe></span>'
