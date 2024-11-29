@@ -2,6 +2,6 @@ dist/
 build/
 __pycache__/
 .vscode/
-pngtools.egg-info/
+indexage.egg-info/
 
 index.html

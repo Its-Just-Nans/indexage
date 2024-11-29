@@ -90,7 +90,12 @@ def main(args):
     parser.add_argument("-r", "--recursive", type=str, help="Recursive", default=True)
     parser.add_argument("-l", "--link", type=str, help="Add repo link", default="")
     parser.add_argument(
-        "-p", "--preview", type=bool, help="Add preview when hovering", default=False
+        "-p",
+        "--preview",
+        action=argparse.BooleanOptionalAction,
+        type=bool,
+        help="Add preview when hovering",
+        default=False,
     )
     parser.add_argument("path", type=str, help="Paths to index")
     args = parser.parse_args()
