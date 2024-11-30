@@ -18,7 +18,7 @@ CSS = """
   padding: 5px;
   left: -1000px;
   border: 1px dashed gray;
-  visibility: hidden;
+  display: none;
   color: black;
   text-decoration: none;
 }
@@ -30,7 +30,7 @@ CSS = """
 }
 
 .thumbnail:hover span {
-  visibility: visible;
+  display: block !important;
   top: 0;
   left: 60px; /*position where enlarged image should offset horizontally */
 """
