@@ -79,6 +79,7 @@ HTML_TEMPLATE = f"""
                 <th colspan="5"><hr /></th>
             </tr>
         </table>
+        <address></address>
     </body>
 </html>"""
 
