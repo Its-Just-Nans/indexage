@@ -73,8 +73,8 @@ def create_html_index(path_to_folder, html_template, options):
             other=other,
         )
         if is_element_dir and one_element not in options["exclude"]:
-            makedirs(options["output"], exist_ok=True)
             new_output = join(options["output"], one_element)
+            makedirs(new_output, exist_ok=True)
             new_options = options.copy()
             new_options["output"] = new_output
             if options["verbose"]:
