@@ -5,7 +5,7 @@ Create apache2-like html index
 ## Usage
 
 ```bash
-python -m pip install pngtools
+python -m pip install indexage
 
 python -m indexage .
 ```
